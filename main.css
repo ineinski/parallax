@@ -1,0 +1,618 @@
+body {
+  background: #111;
+  font-weight: 300;
+}
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #3B3B3A;
+  background-size: tile;
+  background-position: center;
+  text-rendering: optimizeLegibility;
+}
+.background:after {
+  content: '';
+  position: fixed;
+
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  border: 1px solid rgba(255,255,255,.2);
+}
+.wrapper {
+  display: none;
+  margin: 0 auto;
+}
+
+.effect1{
+  -webkit-box-shadow: 0 6px 2px -6px #777;
+   -moz-box-shadow: 0 6px 2px -6px #777;
+  box-shadow: 0 6px 2px -6px #777;
+}
+
+.frameOutline{
+  border: 1px solid rgba(59, 59, 58, .10);
+  height:15em;
+  width:15em;
+  top: 10%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  bottom: 2em;
+}
+
+.centerToSquare{
+  height:25em;
+  width:16em;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 1. Intro Keyframe
+--------------------------------------- */
+#intro {
+  position: fixed;
+  top: 48%;
+  left: 10%;
+  width: 80%;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.name {
+  font-size: 35px;
+  letter-spacing: 12px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+.byline { 
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-align: center;
+  font-weight: 300;
+}
+.ampersand {
+  font-family: "Adobe Caslon Pro", "brandon-grotesque";
+  font-style: italic;
+}
+
+/* 2. Explosion/Images/Links Structure and Text
+--------------------------------------- */
+#explosion,
+#images {
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+}
+.explosion-byline,
+.images-byline, .page1-byline, .page2-byline, .page3-byline, .page4-byline, .page5-byline {
+  position: fixed;
+  top: 63%;
+  left: 10%;
+  color: white;
+  max-width: 22%;
+  opacity: 0;
+}
+.images-byline-2 {
+  text-align: center;
+  position: fixed;
+  top: 100%;
+  left: 25%;
+  color: white;
+  width: 50%;
+  opacity: 0;
+}
+
+/* 3. Graphics Keyframe (Mads)
+--------------------------------------- */
+
+#page1Graphics, #page2Graphics, #page3Graphics, #page4Graphics, #page5Graphics{
+  position: fixed;
+  width: 450px;
+  height: 580px;
+  top: 100%;
+  right: 10%;
+  opacity: 0;
+  background-color: #F6F2DF; 
+}
+.dom-page1-graphic, .dom-page2-graphic, .dom-page3-Graphic, .dom-page4-graphic, .dom-page5-graphic{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+/*  background-color: rgba(59, 59, 58, .10); //This is for positioning help
+*/}
+
+/*///////////////PAGE 1*/
+
+/* 3a. Page 1 Positions (Mads)
+        --------------------------------------- */
+#page1 .dpg-1  { top: 50%;   left: 50%;  }
+#page1 .dpg-2  { top: 0;     left: 20%; }
+#page1 .dpg-3  { top: 35%;   left: 10%; }
+#page1 .dpg-4  { top: 86%;   left: 43%; }
+#page1 .dpg-5  { top: 80%;   left: 48%;  }
+
+
+/* 3a. Page 1 Graphics Attributes (Mads)
+        --------------------------------------- */
+
+#page1{
+  color: black;
+}
+#page1 .dpg-1{
+  background-color: red;
+  height: 40%;
+  width: 40%;
+}
+
+#page1 .dpg-2{
+  font-style: bold;
+  font-size: 180px;
+}
+
+#page1 .dpg-3 p{
+  font-style: bold;
+  font-size: 14px;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#page1 .dpg-4 p{
+  font-size: 14px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+
+#page1 .dpg-5 p{
+  font-size: 12px;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+/*///////////////PAGE 2*/
+
+#page2Graphics{
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+.page2-byline{
+  font-size: 14px;
+}
+
+/* 3a. Page 2 Positions (Mads)
+        --------------------------------------- */
+#page2 .dpg-1  { top: -10%;   left: 25%;  }
+#page2 .dpg-2  { top: 50%;    left: 10%; }
+#page2 .dpg-3  { top: 25%;   left: 10%; }
+
+
+
+/* 3a. Page 2 Graphics Attributes (Mads)
+        --------------------------------------- */
+
+#page2 #blackShield, #page2 .dpg-1 > p  {
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+  transform: rotate(-20deg);
+}
+
+#page2 #blackShield{
+  height: 350px;
+  width: 20px;
+  background-color: black;
+  position: absolute;
+  z-index: 2;
+  right: -60%;
+  top: 350%;
+}
+
+#page2 .dpg-1 > p{
+  font-size: 450px;
+  color: white;
+  z-index: 1;
+  margin: 0 auto;
+  position: absolute;
+}
+
+#page2 .dpg-2 > p{
+  background-color: white;
+  color: black;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+  transform: rotate(-20deg);
+}
+
+#page2 .dpg-2, #page2 .dpg-3{
+  width: 3em;
+  height: 1.5em;
+  padding: 1px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+#page2 .dpg-3{
+  border: 1px solid white;
+}
+
+
+/*///////////////PAGE 3*/
+
+/* 3a. Page 3 Positions (Mads)
+        --------------------------------------- */
+#page3 .dpg-1  { top: 16%;   left: 15%;  z-index:1; position: absolute;}
+#page3 .dpg-2  { top: 10%;  left: 0%; z-index: 2; position: absolute;}
+#page3 .dpg-3  { top: 70%;   left: 33%; z-index:3; position:  absolute;}
+#page3 .dpg-4  { top: 67%;   left: 56%; z-index:4; position: absolute;}
+#page3 .dpg-5  { top: 67%;   left:80%;  z-index:5; position: absolute;}
+
+
+/* 3a. Page 3 Graphics Attributes (Mads)
+        --------------------------------------- */
+
+#page3{
+  color: black;
+  position: relative;
+  overflow: visible;
+}
+#page3 p{
+  font-size: 12px;
+}
+#page3 .dpg-2{
+  position: relative;
+}
+/*all the crazy black lines*/
+#page3 .dpg-2 *{
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  z-index: 1;
+}
+
+#page3 .dpg-2 #horiz1 { width: 48%; top: 1.88em;  left: 5.5em; z-index: 4;}
+#page3 .dpg-2 #horiz2 { width: 14%; top: 14.14em;  left: 2.85em; z-index: 2;}
+#page3 .dpg-2 #horiz3 { width: 10%; top: 15.4em;  left: 7.2em; z-index: 2;}
+#page3 .dpg-2 #vert1 { width: 8%; top: 14.8em;  left: 4.43em; z-index: 2;}
+#page3 .dpg-2 #slant1 { width: 16em; top: 8em; left: 0; z-index: 0;}
+#page3 .dpg-2 #slant2 { width: 10%; top: 14.9em;  left: 7em; }
+#page3 .dpg-2 #slant3 { width: 10%; top: 15.96em;  left: 6.98em; }
+
+
+#page3 .dpg-2 #slant1{
+  -ms-transform: rotate(-50deg); /* IE 9 */
+  -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
+  transform: rotate(-50deg);
+}
+
+#page3 .dpg-2 #slant2{
+  -ms-transform: rotate(-40deg); /* IE 9 */
+  -webkit-transform: rotate(-40deg); /* Chrome, Safari, Opera */
+  transform: rotate(-40deg);
+}
+#page3 .dpg-2 #slant3{
+  -ms-transform: rotate(-50deg); /* IE 9 */
+  -webkit-transform: rotate(-50deg); /* Chrome, Safari, Opera */
+  transform: rotate(40deg);
+}
+
+#page3 .dpg-2 #vert1{
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#page3 .dpg-1 p{
+  font-size: 12px;
+
+}
+
+#page3 .byline{
+  font-size:15px;
+}
+
+/*///////////////PAGE 4*/
+
+/* 3a. Page 4 Positions (Mads)
+        --------------------------------------- */
+#page4 .dpg-1  { top: 50%;   left: 45%; position: absolute; }
+#page4 .dpg-2  { top: 10%;  left: 12%; position: absolute;}
+#page4 .dpg-3  { top: 75%;   left: 20%; position: absolute;}
+#page4 .dpg-4  { top: 72%;   left: 60%; position: absolute;}
+
+/* 3a. Page 4 Graphics Attributes (Mads)
+        --------------------------------------- */
+
+#page4{
+  color: black;
+}
+#page4 .dpg-1, #page4 .dpg-2{
+  height: 100%;
+  width: 100%;
+}
+
+#page4 .dpg-1 #redsq4{
+  background-color: red;
+  width: 36%;
+  height: 36%;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(15deg);
+}
+
+#page4 .dpg-2 #blksq4{
+  background-color: black;
+  width: 36%;
+  height: 36%;
+}
+
+#page4 .dpg-3{
+  width:13em;
+  height: 13em;
+}
+#page4 .dpg-3 p{
+  border-top: 1px solid black;
+  font-size: 9px;
+  width: 4em;
+  position: absolute;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-80deg);
+}
+
+#page4 #page4Graphics p{
+  font-size: 10px;
+  line-height: 18px;
+}
+
+
+/*///////////////PAGE 5*/
+
+/* 3a. Page 5 Positions (Mads)
+        --------------------------------------- */
+
+#page5 .dpg-1  { top: 0%;   left: 0%; position: absolute;}
+#page5 .dpg-2  { top: 0%;  left: 0%; position: absolute;}
+#page5 .dpg-3  { top: 0%;   left: 0%; position: absolute;}
+#page5 .dpg-4  { top: 0%;   left: 0%; position: absolute;}
+
+#page5{
+  position: relative;
+}
+
+#page5 .dpg-1{
+  width: 100%;
+  height: 100%;
+  background: url("../img/suprem_big_1-01.svg");
+  background-size: 105%;
+  z-index: 3;
+}
+
+#page5 .dpg-2{
+  width:150%;
+  height: 50%;
+  background-color: #3B3B3A;
+  z-index: 1;
+}
+
+#page5 .dpg-3{
+  width: 100%;
+  height: 100%;
+  background: url("../img/suprem_big_1log.svg");
+  background-size: 105%;
+  z-index: 4;
+}
+
+#page5 .dpg-4{
+  width: 100%;
+  height: 100%;
+  background: url("../img/suprem_big_1tri.svg");
+  background-size: 105%;
+  z-index: 4;
+}
+
+
+
+#page5 .dpg-5{
+  position: relative;
+}
+#page5 .dpg-5 * {
+  position: absolute;
+  height: 1px;
+  background-color: red;
+}
+
+#page5 .dpg-5 #vert5 { width: 6px; top: 40%;  left: ; z-index: 800;}
+#page5 .dpg-5 #horiz5{ width: 6px; top: 0%;  left: ; z-index: 800;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3. Explosion Keyframe
+--------------------------------------- */
+#domExplosionList {
+  position: fixed;
+  width: 270px;
+  top: 100%;
+  right: 15%;
+  opacity: 0;
+}
+.dom-explosion-item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+}
+.dei-1  { top: 0;   left: 0;  }
+.dei-2  { top: 0;   left: 70px; }
+.dei-3  { top: 0;   left: 140px; }
+.dei-4  { top: 0;   left: 210px; }
+.dei-5  { top: 70px;   left: 0;  }
+.dei-6  { top: 70px;   left: 70px; }
+.dei-7  { top: 70px;   left: 140px; }
+.dei-8  { top: 70px;   left: 210px; }
+.dei-9  { top: 140px;   left: 0;  }
+.dei-10 { top: 140px;   left: 70px; }
+.dei-11 { top: 140px;   left: 140px; }
+.dei-12 { top: 140px;   left: 210px; }
+.dei-13 { top: 210px;   left: 0;  }
+.dei-14 { top: 210px;   left: 70px; }
+.dei-15 { top: 210px;   left: 140px; }
+.dei-16 { top: 210px;   left: 210px; }
+
+
+/* 3. Images Keyframe
+--------------------------------------- */
+.raw-page {
+  position: fixed;
+  width: 45%;
+  border-radius: 6px;
+  box-shadow: inset 0 0 1px rgba(255,255,255,.3);
+  border: 1px solid rgba(0,0,0,.2);
+  background-clip: padding-box;
+}
+#mediumHomepage {
+  top: 100%;
+  right: 5%;
+}
+.iphone {
+  position: fixed;
+  right: 40%;
+  top: 102%;
+  width: 16%;
+}
+.iphone-frame {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: 100%;
+  z-index: 2;
+}
+.iphone-viewport {
+  width: 83.5%;
+  height: 69.5%;
+  position: absolute;
+  top: 14%; 
+  left: 8%;
+  overflow: hidden;
+  background-color: #000;
+}
+.iphone-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#medium-profile-iphone {
+  z-index: 2;
+}
+
+/* 3. Links Keyframe
+--------------------------------------- */
+#links {
+  position: fixed;
+  top: 48%;
+  left: 10%;
+  width: 80%;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+}
+.links-byline {
+  font-size: 30px;
+  line-height: 1.15;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid rgba(255,255,255,.5);
+  color: rgba(255,255,255,.8);
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  border-color: #fff;
+}
+.twitter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+/* 4. Handling resize and small devices
+--------------------------------------- */
+.error {
+  display: none;
+  position: fixed;
+  width: 80%;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  top: 30%;
+  left: 10%;
+}
+.page-error .error {
+  display: block;
+}
+.page-error .container {
+  display: none;
+}
+@media all and (max-width: 1000px) {
+  .container {
+    display: none;
+  }
+  .error {
+    display: block;
+    font-size: 22px;
+  }
+}
